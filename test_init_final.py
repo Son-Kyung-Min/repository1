@@ -1758,7 +1758,7 @@ while True:
 			tmp_boss_information.append('')
 
 			for i in range(bossNum):
-				if bossTimeString[i] == '99:99:99' and bossMungFlag[i] != True :
+				if bossTimeString[i] == '99:99' and bossMungFlag[i] != True :
 					if len(tmp_boss_information[tmp_cnt]) > 1000 :
 						tmp_boss_information.append('')
 						tmp_cnt += 1
@@ -1918,7 +1918,7 @@ while True:
 			tmp_boss_information.append('')
 
 			for i in range(bossNum):
-				if bossTimeString[i] == '99:99:99' and bossMungFlag[i] != True :
+				if bossTimeString[i] == '99:99' and bossMungFlag[i] != True :
 					if len(tmp_boss_information[tmp_cnt]) > 1800 :
 						tmp_boss_information.append('')
 						tmp_cnt += 1
