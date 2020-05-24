@@ -1507,7 +1507,7 @@ while True:
 			return
 
 	################ 분배 결과 출력 ################ 
-	@client.command(name=command[11][0], aliases=command[11][1:])
+	@client.command(name=command[10][0], aliases=command[10][1:])
 	async def bunbae_(ctx):
 		if ctx.message.channel.id == basicSetting[7]:
 			msg = ctx.message.content[len(ctx.invoked_with)+1:]
@@ -1517,7 +1517,6 @@ while True:
 			cal_tax1 = floor(float(separate_money[1])*0.05)
 			
 			real_money = floor(floor(float(separate_money[1])) - cal_tax1)
-			
 			if num_sep == 0 :
 				await ctx.send('```분배 인원이 0입니다. 재입력 해주세요.```', tts=False)
 			else :
