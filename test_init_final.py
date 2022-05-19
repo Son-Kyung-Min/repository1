@@ -2027,7 +2027,7 @@ class mainCog(commands.Cog):
 		if ctx.message.channel.id == basicSetting[7]:
 			msg = ctx.message.content[len(ctx.invoked_with)+1:]
 			for i in range(bossNum):
-				if bossTimeString[i] == '99:99:99':
+				if bossTimeString[i] == '99:99':
 					tmp_msg = msg
 					if len(tmp_msg) > 3 :
 						if tmp_msg.find(':') != -1 :
@@ -2104,7 +2104,7 @@ class mainCog(commands.Cog):
 		if ctx.message.channel.id == basicSetting[7]:
 			msg = ctx.message.content[len(ctx.invoked_with)+1:]
 			for i in range(bossNum):
-				if bossData[i][2] == "1" and bossTimeString[i] == '99:99:99':
+				if bossData[i][2] == "1" and bossTimeString[i] == '99:99':
 					tmp_msg = msg
 					if len(tmp_msg) > 3 :
 						if tmp_msg.find(':') != -1 :
@@ -2169,7 +2169,7 @@ class mainCog(commands.Cog):
 			sorted_datelist = []
 
 			for i in range(bossNum):
-				if bossMungFlag[i] != True and bossTimeString[i] != '99:99:99' :
+				if bossMungFlag[i] != True and bossTimeString[i] != '99:99' :
 					datelist2.append(bossTime[i])
 
 			for i in range(fixed_bossNum):
