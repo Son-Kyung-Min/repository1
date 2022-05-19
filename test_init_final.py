@@ -445,7 +445,7 @@ def init():
 		tmp_bossTime.append(datetime.datetime.now()+datetime.timedelta(days=365, hours = int(basicSetting[0])))
 		bossTimeString.append('99:99')
 		bossDateString.append('9999-99-99')
-		tmp_bossTimeString.append('99:99:99')
+		tmp_bossTimeString.append('99:99')
 		tmp_bossDateString.append('9999-99-99')
 		bossFlag.append(False)
 		bossFlag0.append(False)
@@ -600,7 +600,7 @@ async def dbSave():
 
 	for i in range(bossNum):
 		for j in range(bossNum):
-			if bossTimeString[i] and bossTimeString[j] != '99:99:99':
+			if bossTimeString[i] and bossTimeString[j] != '99:99':
 				if bossTimeString[i] == bossTimeString[j] and i != j:
 					tmp_time1 = bossTimeString[j][:6]
 					tmp_time2 = (int(bossTimeString[j][6:]) + 1)%100
@@ -620,7 +620,7 @@ async def dbSave():
 	for timestring in sorted(datelist):
 		for i in range(bossNum):
 			if timestring == bossTime[i]:
-				if bossTimeString[i] != '99:99:99' or bossMungFlag[i] == True :
+				if bossTimeString[i] != '99:99' or bossMungFlag[i] == True :
 					if bossMungFlag[i] == True :
 						if bossData[i][2] == '0' :
 							information1 += ' - ' + bossData[i][0] + '(' + bossData[i][1] + '.' + bossData[i][5] + ') : ' + tmp_bossTime[i].strftime('%H:%M') + ' @ ' + tmp_bossTime[i].strftime('%Y-%m-%d') + ' (미입력 ' + str(bossMungCnt[i]) + '회)' + ' * ' + bossData[i][6] + '\n'
@@ -694,7 +694,7 @@ async def dbLoad():
 						tmp_bossTime[j] = tmp_now
 						tmp_bossTimeString[j] = tmp_bossTime[j].strftime('%H:%M')
 						tmp_bossDateString[j] = tmp_bossTime[j].strftime('%Y-%m-%d')
-						bossTimeString[j] = '99:99:99'
+						bossTimeString[j] = '99:99'
 						bossDateString[j] = '9999-99-99'
 						bossTime[j] = tmp_bossTime[j] + datetime.timedelta(days=365)
 					else:
