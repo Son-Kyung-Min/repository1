@@ -3779,7 +3779,7 @@ class mainCog(commands.Cog):
 					tmp_now = tmp_now + datetime.timedelta(days=int(1))
 							
 				tmp_bossTime[i] = bossTime[i] = nextTime = tmp_now
-				tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
+				tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M')
 				tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
 
 				if  now2 + datetime.timedelta(minutes=int(basicSetting[1])) <= tmp_bossTime[i] < now2 + datetime.timedelta(minutes=int(basicSetting[3])):
