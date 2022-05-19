@@ -1204,7 +1204,7 @@ class taskCog(commands.Cog):
 										bossMungFlag[i] = False
 										bossMungCnt[i] = bossMungCnt[i] + 1
 										tmp_bossTime[i] = bossTime[i] = nextTime = tmp_bossTime[i]+datetime.timedelta(hours=int(bossData[i][1]), minutes=int(bossData[i][5]))
-										tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
+										tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M')
 										tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
 										await self.bot.get_channel(channel).send("```" +  bossData[i][0] + ' 미입력 됐습니다.```', tts=False)
 										embed = discord.Embed(
@@ -1224,7 +1224,7 @@ class taskCog(commands.Cog):
 										bossMungFlag[i] = False
 										bossMungCnt[i] = bossMungCnt[i] + 1
 										tmp_bossTime[i] = bossTime[i] = nextTime = tmp_bossTime[i]+datetime.timedelta(hours=int(bossData[i][1]), minutes=int(bossData[i][5]))
-										tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M:%S')
+										tmp_bossTimeString[i] = bossTimeString[i] = nextTime.strftime('%H:%M')
 										tmp_bossDateString[i] = bossDateString[i] = nextTime.strftime('%Y-%m-%d')
 										await self.bot.get_channel(channel).send("```" + bossData[i][0] + ' 멍 입니다.```')
 										embed = discord.Embed(
