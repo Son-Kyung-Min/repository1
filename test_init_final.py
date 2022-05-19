@@ -2385,7 +2385,7 @@ class mainCog(commands.Cog):
 
 						tmp_time_delta = (tmp_bossTime[i].date() - (datetime.datetime.now() + datetime.timedelta(hours=int(basicSetting[0]))).date()).days
 						if tmp_time_delta == 0:
-							aa.append(tmp_bossTime[i].strftime('%H:%M:%S'))
+							aa.append(tmp_bossTime[i].strftime('%H:%M'))
 						else:
 							if tmp_time_delta > 0:
 								aa.append(f"(+{tmp_time_delta}d) {tmp_bossTime[i].strftime('%H:%M')}")
