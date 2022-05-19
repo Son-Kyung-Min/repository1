@@ -692,14 +692,14 @@ async def dbLoad():
 					if tmp_now_chk > now2 > tmp_now: #젠중.
 						bossMungFlag[j] = True
 						tmp_bossTime[j] = tmp_now
-						tmp_bossTimeString[j] = tmp_bossTime[j].strftime('%H:%M:%S')
+						tmp_bossTimeString[j] = tmp_bossTime[j].strftime('%H:%M')
 						tmp_bossDateString[j] = tmp_bossTime[j].strftime('%Y-%m-%d')
 						bossTimeString[j] = '99:99:99'
 						bossDateString[j] = '9999-99-99'
 						bossTime[j] = tmp_bossTime[j] + datetime.timedelta(days=365)
 					else:
 						tmp_bossTime[j] = bossTime[j] = tmp_now
-						tmp_bossTimeString[j] = bossTimeString[j] = bossTime[j].strftime('%H:%M:%S')
+						tmp_bossTimeString[j] = bossTimeString[j] = bossTime[j].strftime('%H:%M')
 						tmp_bossDateString[j] = bossDateString[j] = bossTime[j].strftime('%Y-%m-%d')
 						
 					if  now2 + datetime.timedelta(minutes=int(basicSetting[1])) <= tmp_bossTime[j] < now2 + datetime.timedelta(minutes=int(basicSetting[3])):
