@@ -3922,7 +3922,7 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 
 			now = datetime.datetime.now() + datetime.timedelta(hours = int(basicSetting[0]))
 
-			print('< 접속시간 [' + now.strftime('%Y-%m-%d ') + now.strftime('%H:%M:%S') + '] >')
+			print('< 접속시간 [' + now.strftime('%Y-%m-%d ') + now.strftime('%H:%M') + '] >')
 			print('< 텍스트채널 [' + self.get_channel(basicSetting[7]).name + '] 접속완료>')
 			if basicSetting[21] == "1" and str(basicSetting[6]) in channel_voice_id:
 				try:
