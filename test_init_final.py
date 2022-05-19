@@ -1007,7 +1007,7 @@ class taskCog(commands.Cog):
 
 			if channel != '':			
 				################ 보탐봇 재시작 ################ 
-				if endTime.strftime('%Y-%m-%d ') + endTime.strftime('%H:%M:%S') == now.strftime('%Y-%m-%d ') + now.strftime('%H:%M:%S'):
+				if endTime.strftime('%Y-%m-%d ') + endTime.strftime('%H:%M') == now.strftime('%Y-%m-%d ') + now.strftime('%H:%M'):
 					await dbSave()
 					await FixedBossDateSave()
 					await data_list_Save("kill_list.ini", "-----척살명단-----", kill_Data)
