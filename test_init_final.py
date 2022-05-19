@@ -1339,7 +1339,7 @@ class mainCog(commands.Cog):
 					basicSetting[20] = ""
 					print(f"아이템채널 ID 오류! [{command[28][0]} 아이템] 명령으로 재설정 바랍니다.")
 			if int(basicSetting[13]) != 0 :
-				print('< 보탐봇 재시작 시간 ' + endTime.strftime('%Y-%m-%d ') + endTime.strftime('%H:%M:%S') + ' >')
+				print('< 보탐봇 재시작 시간 ' + endTime.strftime('%Y-%m-%d ') + endTime.strftime('%H:%M') + ' >')
 				print('< 보탐봇 재시작 주기 ' + basicSetting[13] + '일 >')
 			else :
 				print('< 보탐봇 재시작 설정안됨 >')
