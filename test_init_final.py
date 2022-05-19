@@ -2563,7 +2563,7 @@ class mainCog(commands.Cog):
 						aa.append(bossTime[i])                           #output_bossData[1] : 시간
 
 						if (datetime.datetime.now() + datetime.timedelta(hours=int(basicSetting[0]))).strftime('%Y-%m-%d') == bossTime[i].strftime('%Y-%m-%d'):
-							aa.append(bossTime[i].strftime('%H:%M:%S'))
+							aa.append(bossTime[i].strftime('%H:%M'))
 						else:
 							aa.append(f"[{bossTime[i].strftime('%Y-%m-%d')}] {bossTime[i].strftime('%H:%M:%S')}")
 							
