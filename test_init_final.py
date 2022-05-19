@@ -4251,7 +4251,7 @@ class IlsangDistributionBot(commands.AutoShardedBot):
 						tmp_bossTime[i] =  datetime.datetime.now()+datetime.timedelta(days=365, hours = int(basicSetting[0]))
 						bossTimeString[i] = '99:99'
 						bossDateString[i] = '9999-99-99'
-						tmp_bossTimeString[i] = '99:99:99'
+						tmp_bossTimeString[i] = '99:99'
 						tmp_bossDateString[i] = '9999-99-99'
 						bossFlag[i] = False
 						bossFlag0[i] = False
