@@ -1149,7 +1149,7 @@ class taskCog(commands.Cog):
 						tmp_bossTime[i] = bossTime[i]
 						tmp_bossTimeString[i] = tmp_bossTime[i].strftime('%H:%M')
 						tmp_bossDateString[i] = tmp_bossTime[i].strftime('%Y-%m-%d')
-						bossTimeString[i] = '99:99:99'
+						bossTimeString[i] = '99:99'
 						bossDateString[i] = '9999-99-99'
 						bossTime[i] = now+datetime.timedelta(days=365)
 						if bossData[i][6] != '' :
@@ -1180,9 +1180,9 @@ class taskCog(commands.Cog):
 								if int(basicSetting[17]) <= bossMungCnt[i] and int(basicSetting[17]) != 0:
 									bossTime[i] = datetime.datetime.now()+datetime.timedelta(days=365, hours = int(basicSetting[0]))
 									tmp_bossTime[i] =  datetime.datetime.now()+datetime.timedelta(days=365, hours = int(basicSetting[0]))
-									bossTimeString[i] = '99:99:99'
+									bossTimeString[i] = '99:99'
 									bossDateString[i] = '9999-99-99'
-									tmp_bossTimeString[i] = '99:99:99'
+									tmp_bossTimeString[i] = '99:99'
 									tmp_bossDateString[i] = '9999-99-99'
 									bossFlag[i] = False
 									bossFlag0[i] = False
