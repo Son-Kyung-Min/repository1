@@ -1036,17 +1036,17 @@ class taskCog(commands.Cog):
 				if len(self.bot.voice_clients) == 0 and self.checker and basicSetting[21] == "1":
 					try:
 						await self.bot.get_channel(basicSetting[6]).connect(reconnect=True, timeout=5)
-						print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} : 음성 채널 자동 재접속완료!")
+						print(f"{now.strftime('%Y-%m-%d %H:%M')} : 음성 채널 자동 재접속완료!")
 					except discord.errors.ClientException as e:
-						print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} : 음성 자동 접속 부분에서 서버 음성 채널 이미 접속 에러 : {e}")
+						print(f"{now.strftime('%Y-%m-%d %H:%M')} : 음성 자동 접속 부분에서 서버 음성 채널 이미 접속 에러 : {e}")
 						self.checker = False
 						pass
 					except Exception as e:
-						print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} : 음성 자동 접속 부분에서 서버 음성 채널 타임아웃 에러 : {e}")
+						print(f"{now.strftime('%Y-%m-%d %H:%M')} : 음성 자동 접속 부분에서 서버 음성 채널 타임아웃 에러 : {e}")
 						self.checker = False
 						pass
 					if not self.bot.voice_clients[0].is_connected():
-						print(f"{now.strftime('%Y-%m-%d %H:%M:%S')} : 음성 채널 자동 복구실패!")
+						print(f"{now.strftime('%Y-%m-%d %H:%M')} : 음성 채널 자동 복구실패!")
 						await self.bot.get_channel(channel).send( '< 음성 채널 접속에 실패하였습니다. 잠시 후 음성 채널 접속을 시도해주세요! >')
 						self.checker = False
 						pass
