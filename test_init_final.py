@@ -1765,7 +1765,7 @@ class mainCog(commands.Cog):
 			if basicSetting[2] != '0' and basicSetting[22] != '0':
 				for i in range(bossNum):
 					if bossMungFlag[i] == True:
-						bossTimeString[i] = tmp_bossTime[i].strftime('%H:%M:%S')
+						bossTimeString[i] = tmp_bossTime[i].strftime('%H:%M')
 						bossDateString[i] = tmp_bossTime[i].strftime('%Y-%m-%d')
 			await dbSave()
 			await data_list_Save("kill_list.ini", "-----척살명단-----", kill_Data)
