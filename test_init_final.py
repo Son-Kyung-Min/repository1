@@ -1147,7 +1147,7 @@ class taskCog(commands.Cog):
 						#print ('if ', bossTime[i])
 						bossMungFlag[i] = True
 						tmp_bossTime[i] = bossTime[i]
-						tmp_bossTimeString[i] = tmp_bossTime[i].strftime('%H:%M:%S')
+						tmp_bossTimeString[i] = tmp_bossTime[i].strftime('%H:%M')
 						tmp_bossDateString[i] = tmp_bossTime[i].strftime('%Y-%m-%d')
 						bossTimeString[i] = '99:99:99'
 						bossDateString[i] = '9999-99-99'
